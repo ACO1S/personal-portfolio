@@ -1,14 +1,12 @@
 # Personal Portfolio Website
 
-Welcome to my personal portfolio! This website showcases my background, technical skills, projects, and professional experience.
-
-It is built using **React** and designed to provide potential employers, collaborators, or anyone interested in my work a clear view of who I am and what I can do.
+Welcome to my personal portfolio! This website showcases my background, technical skills, projects, and professional experience. It is built using React and designed to provide potential employers, collaborators, or anyone interested in my work, a clear view of who I am and what I can do.
 
 ---
 
 ## Purpose
 
-The purpose of this portfolio is to provide a professional yet personal platform where I can display my work, skills, and achievements in a way that is easily accessible. It serves as both a **dynamic résumé** and an **interactive showcase** of my technical projects, giving visitors an opportunity to explore my work in more detail.
+The purpose of this portfolio is to provide a professional yet personal platform where I can display my work, skills, and achievements in a way that is easily accessible. It serves as both a dynamic resume and an interactive showcase of my technical projects, giving visitors an opportunity to get to know me better and explore my work in more detail. The website is also designed to be user-friendly, responsive, and visually appealing, reflecting both my design sense and technical capabilities.
 
 ---
 
