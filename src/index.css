@@ -1493,4 +1493,11 @@ body::before {
     .footer-right {
       text-align: center;
     }
+    
+    /* NEW: CONTACT SECTION: Fix long text overflow (like emails) */
+    .contact-card p {
+        word-break: break-word; 
+        overflow-wrap: break-word; 
+        text-align: center; 
+    }
 }
