@@ -544,7 +544,7 @@ body::before {
 }
 
 .about-image {
-  width: 260px;        /* adjust size smaller */
+  width: 260px;
   height: 260px;
   border-radius: 20px;
   position: relative;
