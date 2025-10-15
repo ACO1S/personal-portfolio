@@ -15,9 +15,9 @@ import ResumePDF from "/Francois_Dungca_Resume.pdf";
 
 
 // About Section Images
-import jmjLogo from "/assets/jmj.png";
-import mhsLogo from "/assets/mhs.png";
-import lvccLogo from "/assets/lvcc.png";
+import jmjLogo from "/public/jmj.png";
+import mhsLogo from "/public/mhs.png";
+import lvccLogo from "/public/lvcc.png";
 
 
 // --- UPDATED PROJECT DATA ---
