@@ -10,12 +10,6 @@ It is built using **React** and designed to provide potential employers, collabo
 
 The purpose of this portfolio is to provide a professional yet personal platform where I can display my work, skills, and achievements in a way that is easily accessible. It serves as both a **dynamic résumé** and an **interactive showcase** of my technical projects, giving visitors an opportunity to explore my work in more detail.
 
-The website is designed to be:
-
-* **User-friendly** – simple and intuitive navigation
-* **Responsive** – adaptable across all devices
-* **Visually appealing** – reflects both my design sense and technical skills
-
 ---
 
 ## Portfolio Features
