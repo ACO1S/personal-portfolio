@@ -1494,10 +1494,22 @@ body::before {
       text-align: center;
     }
     
-    /* NEW: CONTACT SECTION: Fix long text overflow (like emails) */
-    .contact-card p {
-        word-break: break-word; 
+    .contact-card p, 
+    .contact-card div, 
+    .contact-card span {
+        word-break: break-all; 
         overflow-wrap: break-word; 
         text-align: center; 
+    }
+
+    /* FOOTER FIXES */
+    .footer-content {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .footer-right {
+      text-align: center;
     }
 }
