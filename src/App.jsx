@@ -262,15 +262,25 @@ export default function App() {
             </a>
           </div>
 
-            <a href={ResumePDF} download="Francois_Dungca_Resume.pdf" className="download-button">
-              <span>Download Resume</span>
+            <a
+              href={ResumePDF}
+              download="Francois_Dungca_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="download-button"
+            >
+              <span>Download Résumé</span>
               <svg
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="2"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M7 10l5 5 5-5M12 15V3m9 12v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M7 10l5 5 5-5M12 15V3m9 12v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"
+                />
               </svg>
             </a>
 
