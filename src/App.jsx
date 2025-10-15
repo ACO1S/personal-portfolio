@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 // --- IMPORT IMAGES ---
-import IRCITEImage from "./IRCITE.png";
+import IRCITEImage from "/IRCITE.png";
 import CLICKNCHICKImage from "/CLICK_N_CHICK.png";
 import SAKSESImage from "/SAKSES.jpg";
 import DREAMLOGImage from "/DREAMLOG1.png";
