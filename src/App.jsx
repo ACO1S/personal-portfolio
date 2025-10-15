@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 
 // --- IMPORT IMAGES ---
-import IRCITEImage from "/IRCITE.png";
-import CLICKNCHICKImage from "/CLICK N CHICK.png";
+import IRCITEImage from "./IRCITE.png";
+import CLICKNCHICKImage from "/CLICK_N_CHICK.png";
 import SAKSESImage from "/SAKSES.jpg";
 import DREAMLOGImage from "/DREAMLOG1.png";
 import PSITEImage from "/TAKEOVER.png";
@@ -15,10 +15,9 @@ import ResumePDF from "/Francois_Dungca_Resume.pdf";
 
 
 // About Section Images
-import avatarImage from "/avatar.jpg"; // FIX: Import the avatar image directly
-import jmjLogo from "/jmj.png";
-import mhsLogo from "/mhs.png";
-import lvccLogo from "/lvcc.png";
+import jmjLogo from "./assets/jmj.png";
+import mhsLogo from "./assets/mhs.png";
+import lvccLogo from "./assets/lvcc.png";
 
 
 // --- UPDATED PROJECT DATA ---
