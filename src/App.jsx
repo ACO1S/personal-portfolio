@@ -11,6 +11,7 @@ import PSASImage from "/SIGNAGE.png";
 import YUMYANImage from "/YUMYAN.jpg";
 import RIAMImage from "/RIAM.png";
 import CASE1229Image from "/1229.png"; 
+import ResumePDF from "/Francois_Dungca_Resume.pdf";
 
 
 // About Section Images
@@ -261,7 +262,7 @@ export default function App() {
             </a>
           </div>
 
-            <a href="/Francois_Dungca_Resume.pdf" download className="download-button">
+            <a href={ResumePDF} download="Francois_Dungca_Resume.pdf" className="download-button">
               <span>Download Resume</span>
               <svg
                 viewBox="0 0 24 24"
@@ -269,7 +270,7 @@ export default function App() {
                 stroke="currentColor"
                 strokeWidth="2"
               >
-                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M7 10l5 5 5-5M12 15V3m9 12v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
               </svg>
             </a>
 
