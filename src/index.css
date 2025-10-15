@@ -23,7 +23,8 @@
 body {
   background: var(--bg);
   color: var(--fg);
-  overflow-x: hidden;
+  /* AVOID overflow-x: hidden on body, use overflow-x: clip for better mobile support */
+  overflow-x: clip; 
   position: relative;
 }
 
@@ -543,7 +544,7 @@ body::before {
 }
 
 .about-image {
-  width: 260px;        /* adjust size smaller */
+  width: 260px;        /* adjust size smaller */
   height: 260px;
   border-radius: 20px;
   position: relative;
@@ -726,16 +727,24 @@ body::before {
 }
 
 .edu-logo-wrapper {
+  /* CRITICAL FIX 1: Ensure logo wrapper maintains its size */
   flex-shrink: 0;
+  /* CRITICAL FIX 2: Set explicit width/height to avoid collapse on mobile flex */
+  width: 100px; 
+  height: 100px;
 }
 
 .edu-logo {
-  width: 100px;
-  height: 100px;
+  width: 100%; /* Use 100% of parent wrapper */
+  height: 100%; /* Use 100% of parent wrapper */
   background: linear-gradient(135deg, #1a1a1a, #0a0a0a);
   border-radius: 50%;
   border: 2px solid var(--border);
   object-fit: cover;
+}
+
+.edu-text {
+    flex: 1; /* Allow text content to take up remaining space */
 }
 
 .edu-text h4 {
@@ -1026,11 +1035,14 @@ body::before {
   border-radius: 15px;
   position: relative;
   overflow: hidden;
+  /* CRITICAL FIX 3: Ensure the image container has a definite minimum size */
+  min-height: 200px; 
 }
 
 .project-main-image {
   width: 100%;
   height: 100%;
+  /* KEY FIX: Change object-fit from 'contain' (which may leave empty space and make it look invisible if the image itself is small) to 'cover' or 'scale-down' if the image is the correct size */
   object-fit: contain; 
   padding: 10px;
   border-radius: 15px;
@@ -1362,53 +1374,123 @@ body::before {
 /* ------------------------------------------------------------------- */
 
 @media (max-width: 900px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-  }
+    /* Critical global fix for mobile layout issues */
+    .about, .skills, .projects, .contact {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .header-inner {
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+    }
 
-  .nav {
-    gap: 20px;
-  }
+    .nav {
+      gap: 20px;
+    }
 
-  .about-card {
-    flex-direction: column;
-    padding: 30px;
-  }
+    /* ABOUT SECTION FIXES */
+    .about-card {
+      flex-direction: column;
+      padding: 30px;
+      text-align: center; /* Center text inside the card */
+    }
+    
+    .about-right {
+        /* Ensure text is aligned correctly after centering the card */
+        align-items: center; 
+    }
 
-  .about-image {
-    width: 200px;
-    height: 200px;
-  }
-  
-  /* Project hero is now vertically stacked by default, but minor adjustments */
-  .project-hero {
-    /* Since we changed it to flex-direction: column for all sizes, this just adjusts padding */
-    padding: 30px;
-  }
+    .about-image {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 0; /* Remove extra margin */
+    }
+    
+    .bio-container {
+        padding-left: 0; /* Remove left padding that was offsetting the quote */
+    }
+    
+    .quote-mark {
+        left: 50%;
+        transform: translateX(-50%); /* Center the quote mark */
+    }
 
-  .hero-nav {
-    top: 15px;
-    right: 15px;
-  }
+    /* EDUCATION SECTION FIXES */
+    .edu-item {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .edu-year {
+        min-width: unset; /* Allow year to shrink */
+        width: 100%;
+        text-align: center;
+    }
 
-  .edu-item {
-    flex-direction: column;
-    gap: 15px;
-  }
+    .edu-connector {
+      display: none;
+    }
+    
+    .edu-content {
+        flex-direction: column; /* Stack logo and text inside content */
+        align-items: center;
+        text-align: center; /* Center text content */
+    }
+    
+    .edu-logo-wrapper {
+        /* CRITICAL: No changes needed here, as the fix was applied globally, but important for context */
+        width: 80px; /* Adjust size for mobile */
+        height: 80px;
+    }
+    
+    .edu-text h4, .edu-level, .edu-desc {
+        text-align: center; /* Ensure all text inside is centered */
+    }
 
-  .edu-connector {
-    display: none;
-  }
+    /* PROJECT SECTION FIXES */
+    .project-hero {
+      /* Since we changed it to flex-direction: column for all sizes, this just adjusts padding */
+      padding: 30px;
+    }
 
-  .footer-content {
-    flex-direction: column;
-    gap: 30px;
-    text-align: center;
-  }
+    .hero-nav {
+      top: 15px;
+      right: 15px;
+    }
+    
+    .hero-right {
+        align-items: center; /* Center align text in mobile project card */
+        text-align: center;
+    }
+    
+    .project-tag {
+        margin: 0 auto; /* Center the tag */
+    }
+    
+    .hero-desc-box {
+        text-align: left; /* Keep description left-aligned for readability */
+    }
+    
+    .hero-button {
+        margin: 20px auto 0; /* Center the button below the image */
+    }
+    
+    .project-main-image {
+        /* Ensure the image fills the container width in mobile view */
+        width: 100%; 
+        object-fit: contain;
+    }
 
-  .footer-right {
-    text-align: center;
-  }
+    /* FOOTER FIXES */
+    .footer-content {
+      flex-direction: column;
+      gap: 30px;
+      text-align: center;
+    }
+
+    .footer-right {
+      text-align: center;
+    }
 }
